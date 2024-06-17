@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2021",
+    "baseUrl": ".",
     "module": "commonjs",
-    "outDir": "dist",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "sourceMap": true,
     "alwaysStrict": true,
     "strict": true,
@@ -12,7 +15,10 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "removeComments": true
+    "removeComments": true,
+    "paths": {
+      "@infra/*": ["src/infra/*"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
