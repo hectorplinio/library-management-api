@@ -17,7 +17,9 @@
     "noImplicitAny": true,
     "removeComments": true,
     "paths": {
-      "@infra/*": ["src/infra/*"]
+      "@infra/*": ["src/infra/*"],
+      "@domain/*": ["src/domain/*"],
+      "@application/*": ["src/application/*"]
     }
   },
   "include": ["src/**/*.ts"],

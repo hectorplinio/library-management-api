@@ -1,6 +1,7 @@
 import express, { Application as ExpressApplication } from 'express';
 import { Server } from 'http';
-import { checkRouter } from '../../../primary-inputs/check/express/router';
+import { checkRouter } from '@infra/primary-inputs/check/express/router';
+import { usersRouter } from '@infra/primary-inputs/users/express/router';
 
 export interface Application<ApplicationType> {
   app: ApplicationType;
@@ -16,9 +17,11 @@ const createServer = async (
   console.info(`Starting API on ${libraryManagementAppPort}...`);
 
   // MIDDLEWARES
+  app.use(express.json());
 
   // ENDPOINTS
   app.use('/check', checkRouter);
+  app.use('/users', usersRouter);
 
   const close = (): Promise<void> => {
     return new Promise((resolve) => {
