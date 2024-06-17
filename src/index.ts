@@ -1,4 +1,4 @@
-import { createServer } from './infra/server';
+import { createServer } from './infra/shared/primary-inputs/express/server';
 
 const PORT = 3000;
 

@@ -1,6 +1,6 @@
 import express, { Application as ExpressApplication } from 'express';
 import { Server } from 'http';
-import { checkRouter } from './controllers/check/router';
+import { checkRouter } from '../../../primary-inputs/check/express/router';
 
 export interface Application<ApplicationType> {
   app: ApplicationType;
